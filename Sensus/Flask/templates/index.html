@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Income Prediction</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=10, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+</head>
+<body background='/config/workspace/istockphoto-1369269456-1024x1024.jpg'>
+<br>
+<div class="container">
+    <h1>Census Income Prediction</h1>
+        <!-- User Input Form-->
+        <form action="{{ url_for('predict')}}"method="post">
+            <div class="form-group">
+                <input type="text" name="age" placeholder="age" required="required" pattern="\d*" title="Numbers only, please." />
+            
+                    <div class="col">
+                        <label for="sex">Gender:</label>
+                        <select class="form-control" id="sex" name="sex">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <label for="education_rank">Education:</label>
+                <select class="form-control" id="education_rank" name="education_rank">
+                    <option value=1>Preschool</option>
+                    <option value=2>1st-4th</option>
+                    <option value=3>5th-6th</option>
+                    <option value=4>7th-8th</option>
+                    <option value=5>9th</option>
+                    <option value=6>10th</option>
+                    <option value=7>11th</option>
+                    <option value=8>12th</option>
+                    <option value=9>HS-Grad</option>
+                    <option value=10>Bachelor</option>
+                    <option value=11>Masters</option>
+                    <option value=12>College</option>
+                    <option value=13>Prof-School</option>
+                    <option value=14>Assoc-Acdm</option>
+                    <option value=15>Doctorate</option>
+                    <option value=16>Assoc-Voc</option>
+                </select><br>
+                <label for="relationship">Relationship:</label>
+                <select class="form-control" id="relationship" name="relationship">
+                    <option value="Not-in-family">Not-in-family</option>
+                    <option value="Unmarried">Unmarried</option>
+                    <option value="Own-child">Own-child</option>
+                    <option value="Other-relative">Other-relative</option>
+                    <option value="Husband">Husband</option>
+                    <option value="Wife">Wife</option>
+                </select><br>
+
+                <label for="hours_per_week">Working Hours Per Week:</label>
+                <input type="number" step="1" class="form-control" placeholder="working hours per week ex-10" id="hours_per_week" name="hours_per_week" required><br>
+                <div class="col">
+                    <label for="occupation">Occupation:</label>
+                    <select class="form-control" id="occupation" name="occupation">
+                        <option value="Prof-specialty">Prof-specialty</option>
+                        <option value="Craft-repair">Craft-repair</option>
+                        <option value="Other-service">Other-service</option>
+                        <option value="Exec-managerial">Exec-managerial</option>
+                        <option value="Sales">Sales</option>
+                        <option value="Transport-moving">Transport-moving</option>
+                        <option value="Farming-fishing">Farming-fishing</option>
+                        <option value="Adm-clerical">Adm-clerical</option>
+                        <option value="Protective-serv">Protective-serv</option>
+                        <option value="Tech-support">Tech-support</option>
+                        <option value="Handlers-cleaners">Handlers-cleaners</option>
+                        <option value="Machine-op-inspct">Machine-op-inspct</option>
+                        <option value="Armed-Forces">Armed-Forces</option>
+                        <option value="Priv-house-serv">Priv-house-serv</option>
+                    </select>
+                </div>
+                <label for="capital_gain">Capital Gain:</label>
+                <input type="number" step="1" class="form-control" placeholder="capital gain(exa:32400))" id="capital_gain" name="capital_gain" required><br>                
+                <label for="native_country">Country</label>
+                <select class="form-control" id="native_country" name="native_country">
+                    <option value="United-States">United States</option>
+                    <option value="India">India</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Canada">Canada</option>
+                    <option value="El-Salvador">El-Salvador</option>
+                    <option value="others">Other</option>
+                </select>
+            <div class="button-group" style="margin-top:15px;"><br>
+                <button type="submit" name="submit" class="btn btn-primary">Predict</button>
+            </div>
+            </div>
+        </form>
+        <br>
+    <br>
+    <h2> {{ prediction_text }} </h2>
+</div>
+
+
+</body>
+</html>
