@@ -1,4 +1,4 @@
 # INCOME PREDICTION PROJECT :
 
       
-* DATASET :
+* DATASET :https://raw.githubusercontent.com/webstormuser/incomeprediction/main/adult.csv
