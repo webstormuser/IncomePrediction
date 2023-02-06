@@ -11,7 +11,7 @@ So, the target variable (income) will be represented by binary classes. the clas
             https://github.com/webstormuser/incomeprediction/blob/main/Sensus/Census_income%5B2%5D%20(1).ipynb
 
 * Software and tools Required :
-      * Github Account 
-      * Heroku Account 
-      * VSCodeIDE 
-      *  GitCLI
+   1. Github Account 
+   2.  Heroku Account 
+   3.  VSCodeIDE 
+   4.   GitCLI
