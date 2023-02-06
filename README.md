@@ -7,4 +7,5 @@
 So, the target variable (income) will be represented by binary classes. the class 0 for people having income less than or equal to 50k $ per year (<=50k $), and the class 1 for people having income more than 50k $ per year (>50k $).
 
 * Jupyter Notebooke : 
-      Run Notebook to view the 
+      Run Notebook to view the result 
+            https://github.com/webstormuser/incomeprediction/blob/main/Sensus/Census_income%5B2%5D%20(1).ipynb
