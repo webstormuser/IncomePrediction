@@ -17,5 +17,6 @@ So, the target variable (income) will be represented by binary classes. the clas
    4.   GitCLI
 
 * Steps to Run Application :
-1. Create app.py file and run it 
-2. Create proctfile to run it on heroku platform to deploy the model 
+1. First create requirements.txt file and run it to install all the dependencies to run a project 
+2. Create app.py file and run it 
+3. Create proctfile to run it on heroku platform to deploy the model 
